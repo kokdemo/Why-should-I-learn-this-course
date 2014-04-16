@@ -14,7 +14,6 @@
 
 import sys
 import os
-import sphinx_bootstrap_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -105,12 +104,12 @@ html_theme = 'nature'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
+#html_theme_options = {
     # 'bootswatch_theme': "flatly",
     # 'navbar_class': "navbar",
     # 'globaltoc_includehidden': "false",
     # 'globaltoc_depth': 2,
-}
+#}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
