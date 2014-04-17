@@ -1,0 +1,31 @@
+<h3>相关栏目</h3>
+<ul>
+  <li><a href="{{ pathto(master_doc) }}">文档首页</a><ul>
+  {%- for parent in parents %}
+  <li><a href="{{ parent.link|e }}">{{ parent.title }}</a><ul>
+  {%- endfor %}
+    {%- if prev %}
+      <li>前一章: <a href="{{ prev.link|e }}" title="{{ _('previous chapter')
+        }}">{{ prev.title }}</a></li>
+    {%- endif %}
+    {%- if next %}
+      <li>后一章: <a href="{{ next.link|e }}" title="{{ _('next chapter')
+        }}">{{ next.title }}</a></li>
+    {%- endif %}
+  {%- for parent in parents %}
+  </ul></li>
+  {%- endfor %}
+  </ul></li>
+  <!-- 将此标记放置在你希望显示+1 按钮的位置。 -->
+  <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+  <!-- 将此标记放置在最后一个 +1 按钮 标记之后。 -->
+  <script type="text/javascript">
+    window.___gcfg = {lang: 'zh-CN'};
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/platform.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+</ul>
