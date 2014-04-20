@@ -122,7 +122,7 @@ html_theme_path = ['_themes']
 html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = "WhyLearnThis?"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -154,9 +154,8 @@ html_last_updated_fmt = '%b %d, %Y'
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {
 html_sidebars = {
-    'index': ['sidebarintro.html', 'sourcelink.html', 'searchbox.html', 'googleplus.html'],
-    '**': ['localtoc.html', 'relations.html',
-           'sourcelink.html', 'searchbox.html']
+    'index': ['sidebarintro.html', 'searchbox.html', 'googleplus.html'],
+    '**': ['localtoc.html', 'relations.html','searchbox.html']
 }
 
 # Additional templates that should be rendered to pages, maps page names to

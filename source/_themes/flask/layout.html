@@ -7,16 +7,44 @@
   <link media="only screen and (max-device-width: 480px)" href="{{
     pathto('_static/small_flask.css', 1) }}" type= "text/css" rel="stylesheet" />
 {% endblock %}
-{%- block relbar2 %}{% endblock %}
+{%- block relbar1 %}
+{% endblock %}
 
 {% block header %}
   {{ super() }}
-  <!--{% if pagename == 'index' %}-->
-  <!--<div class=indexwrapper>-->
-  <!--{% endif %}-->
+  {% if pagename == 'index' %}
+
+  <script src="_static/main.js"></script>
+  <style>
+      #header{
+          width: 940px;
+          margin: -18px auto 0 auto;
+          background-color: lightgreen;
+      }
+  </style>
+  <div id="header">
+      <p id="attation"></p>
+  </div>
+  {% endif %}
 {% endblock %}
 
 {%- block footer %}
+    {% if pagename == 'index' %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'whyshouldilearnthiscourse'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    {% endif %}
   <div class="footer">
     &copy; Copyright {{ copyright }}.
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
