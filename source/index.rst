@@ -44,7 +44,5 @@ Why should I learn this course?/为啥我要学这个？
 
    rank
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+ * :ref:`search`
 
